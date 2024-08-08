@@ -1,0 +1,177 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    opacity: 0;
+    /* للظهور التدريجي */
+    transition: opacity 1s ease-in-out;
+}
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    animation: fadeInDown 1s ease-out;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    animation: fadeInDown 1.5s ease-out;
+}
+
+.video-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+video {
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.services {
+    padding: 50px 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #444;
+    animation: fadeInUp 1s ease-out;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transform: scale(1);
+    transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease-in-out;
+}
+
+.service-card:hover img {
+    transform: scale(1.05);
+}
+
+.service-info {
+    padding: 20px;
+}
+
+.service-info h3 {
+    margin-top: 10px;
+    color: #444;
+    font-size: 1.5em;
+    animation: fadeInUp 1s ease-out;
+}
+
+.service-info p {
+    color: #666;
+    font-size: 1em;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* باقي تنسيق الصفحة كما هو */
+
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+footer .contact-info {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+footer h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #f4d03f;
+    animation: fadeInUp 1s ease-out;
+}
+
+footer p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+footer a {
+    color: #f4d03f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* تأثيرات التحويم على البطاقات والظهور التدريجي كما هي */
