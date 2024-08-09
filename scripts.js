@@ -1,8 +1,8 @@
-// التأثيرات التفاعلية عند التحويم على بطاقات الخدمة
+// تأثيرات hover على بطاقات الخدمة
 document.querySelectorAll('.service-card').forEach(card => {
     card.addEventListener('mouseover', () => {
         card.style.boxShadow = '0 12px 24px rgba(0, 0, 0, 0.3)';
-        card.style.transform = 'scale(1.1)';
+        card.style.transform = 'scale(1.05)';
     });
 
     card.addEventListener('mouseout', () => {
@@ -11,7 +11,7 @@ document.querySelectorAll('.service-card').forEach(card => {
     });
 });
 
-// استخدام مكتبة ScrollReveal لإظهار العناصر عند التمرير
+// استخدام ScrollReveal لإظهار العناصر عند التمرير
 ScrollReveal().reveal('.service-card', {
     delay: 200,
     distance: '50px',
@@ -42,17 +42,19 @@ ScrollReveal().reveal('.video-section video', {
     easing: 'ease-in-out'
 });
 
-// تأثير تحميل الصفحة
-window.addEventListener('load', () => {
-    document.querySelector('body').style.opacity = '1';
-});
-
-
-// يبقى كما هو دون تغيير
-
 ScrollReveal().reveal('footer .contact-info', {
     delay: 200,
     distance: '20px',
     duration: 800,
     origin: 'bottom'
+});
+
+// تأثير تحميل الصفحة
+window.addEventListener('load', () => {
+    document.querySelector('body').style.opacity = '1';
+});
+
+// منع النقر بزر الفأرة الأيمن على الصور
+document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('contextmenu', (e) => e.preventDefault());
 });
